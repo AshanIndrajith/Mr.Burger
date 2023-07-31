@@ -1,3 +1,18 @@
+<?php include '../classes/Adminlogin.php'?>
+<?php
+   $al=new Adminlogin();
+
+   
+   if ($_SERVER['REQUEST_METHOD']=='POST') {
+      $adminUser=$_POST['username'];
+      $adminPass=$_POST['password'];
+    
+
+      $check=$al->adminLogin($adminUser,$adminPass);
+   }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -67,16 +82,21 @@
                                 <div class="p-5">
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                                        <?php 
+                                 if (isset($check)) {
+                                    echo $check;
+                                 }
+                           ?>
                                     </div>
-                                    <form class="user">
+                                    <form class="user" method="post">
                                         <div class="form-group">
                                             <input type="email" class="form-control form-control-user"
-                                                id="username" aria-describedby="emailHelp"
+                                                id="username" aria-describedby="emailHelp" name="username"
                                                 placeholder="Enter Email Address...">
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user"
-                                                id="password" placeholder="Password">
+                                                id="password" placeholder="Password" name="password">
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
@@ -86,8 +106,7 @@
                                             </div>
                                         </div>
                     
-
-                                        <button type="button" class="Login btn btn-warning btn-user btn-block text-dark" onclick="LogEmployee()">Login</button>
+                                        <button type="submit" name="submit" class="btn btn-success btn-block">Login</button>
                                       
                                       
                                     </form>

@@ -36,14 +36,14 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-warning sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav bg-dark sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div class="sidebar-brand-icon rotate-n-15">
                    
                 </div>
-                <div class="sidebar-brand-text mx-3 text-gray-900"> Admin Panel </div>
+                <div class="sidebar-brand-text mx-3 text-light-900"> Admin Panel </div>
             </a>
 
             <!-- Divider -->
@@ -51,8 +51,8 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active ">
-                <a class="nav-link text-gray-900" href="index.html">
-                    <i class="fa fa-home text-gray-900"></i>
+                <a class="nav-link text-light-900" href="index.html">
+                    <i class="fa fa-home text-light-900"></i>
                     <span >Dashboard</span></a>
             </li>
 
@@ -60,20 +60,20 @@
             <hr class="sidebar-divider">
 
             <!-- Heading -->
-            <div class="sidebar-heading text-gray-900">
+            <div class="sidebar-heading text-light-900">
                 Manage
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed text-gray-900" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                <a class="nav-link collapsed text-light-900" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fa fa-user text-gray-900" ></i>
+                    <i class="fa fa-user text-light-900" ></i>
                     <span>Customer</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header text-gray-900">Manage Customer:</h6>
+                        <h6 class="collapse-header text-light-900">Manage Customer:</h6>
                         <a class="collapse-item" href="customerInsert.html">Add</a>
                         <a class="collapse-item" href="customerView.html">View</a>
                     </div>
@@ -82,15 +82,15 @@
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed text-gray-900" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                <a class="nav-link collapsed text-light-900" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fa fa-car text-gray-900"></i>
-                    <span>Vehicle</span>
+                    <i class="fa fa-car text-light-900"></i>
+                    <span>Admin</span>
                 </a>
-                <div id="collapseUtilities" class="collapse text-gray-900" aria-labelledby="headingUtilities"
+                <div id="collapseUtilities" class="collapse text-light-900" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header text-gray-900">Manage Vehicle:</h6>
+                        <h6 class="collapse-header text-light-900">Manage Admin:</h6>
                         <a class="collapse-item" href="vehicleInsert.html">Add</a>
                         <a class="collapse-item" href="VehicleView.html">View</a>
                     </div>
@@ -98,64 +98,57 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link collapsed text-gray-900" href="#" data-toggle="collapse" data-target="#collapseTwo2"
+                <a class="nav-link collapsed text-light-900" href="#" data-toggle="collapse" data-target="#collapseTwo2"
                     aria-expanded="true" aria-controls="collapseTwo2">
-                    <i class="fa fa-address-card text-gray-900"></i>
-                    <span>Booking</span>
+                    <i class="fa fa-address-card text-light-900"></i>
+                    <span>Product</span>
                 </a>
-                <div id="collapseTwo2" class="collapse text-gray-900" aria-labelledby="headingTwo2" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded text-gray-900">
-                        <h6 class="collapse-header text-gray-900">Manage Booking:</h6>
-                        <a class="collapse-item" href="BookingAccept.html">Booking Requests</a>
+                <div id="collapseTwo2" class="collapse text-light-900" aria-labelledby="headingTwo2" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded text-light-900">
+                        <h6 class="collapse-header text-light-900">Manage Product:</h6>
+                     
                         <a class="collapse-item" href="BookingInsert.html">Add</a>
                         <a class="collapse-item" href="BookingView.html">View</a>
-                        <a class="collapse-item" href="BookingExtend.html">Booking extend</a>
+                  
                     </div>
                 </div>
             </li>
 
-            <li class="nav-item">
-                <a class="nav-link collapsed text-gray-900" href="#" data-toggle="collapse" data-target="#collapseTwo3"
+            <!-- <li class="nav-item">
+                <a class="nav-link collapsed text-light-900" href="#" data-toggle="collapse" data-target="#collapseTwo3"
                     aria-expanded="true" aria-controls="collapseTwo3">
-                    <i class="fa fa-wrench text-gray-900"></i>
+                    <i class="fa fa-wrench text-light-900"></i>
                     <span>Damage</span>
                 </a>
-                <div id="collapseTwo3" class="collapse text-gray-900" aria-labelledby="headingTwo2" data-parent="#accordionSidebar">
+                <div id="collapseTwo3" class="collapse text-light-900" aria-labelledby="headingTwo2" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header text-gray-900">Manage Damage:</h6>
+                        <h6 class="collapse-header text-light-900">Manage Damage:</h6>
                         <a class="collapse-item" href="damageInsert.html">Add</a>
                         <a class="collapse-item" href="DamageView.html">View</a>
                     </div>
                 </div>
-            </li>
+            </li> -->
 
 
-            <li class="nav-item text-gray-900">
-                <a class="nav-link text-gray-900" href="BookingReturn.html">
-                   
-
-                    <i class="fa fa-check-square text-gray-900"></i>
-                    <span>Vehicle Return</span></a>
-            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider">
 
             <!-- Heading -->
-            <div class="sidebar-heading text-gray-900">
+            <div class="sidebar-heading text-light-900">
                Genarate Reports
             </div>
 
             
-            <li class="nav-item text-gray-900">
-                <a class="nav-link text-gray-900" href="TransactionViewReport.html">
-                    <i class="fa fa-file text-gray-900"></i>
+            <li class="nav-item text-light-900">
+                <a class="nav-link text-light-900" href="TransactionViewReport.html">
+                    <i class="fa fa-file text-light-900"></i>
                     <span>Income Report</span></a>
             </li>
 
-            <li class="nav-item text-gray-900">
-                <a class="nav-link text-gray-900" href="DamageViewReport.html">
-                    <i class="fa fa-file text-gray-900"></i>
+            <li class="nav-item text-light-900">
+                <a class="nav-link text-light-900" href="DamageViewReport.html">
+                    <i class="fa fa-file text-light-900"></i>
                     <span>Damage Report</span></a>
             </li>
 
@@ -163,19 +156,13 @@
 
            
            
-           
-
-            <li class="nav-item text-gray-900">
-                <a class="nav-link text-gray-900" href="GPS.html">
-                    <i class="fa fa-map text-gray-900"></i>
-                    <span>GPS Tracking</span></a>
-            </li>
+    
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block ">
 
             <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline text-gray-900">
+            <div class="text-center d-none d-md-inline text-light-900">
                 <button class="rounded-circle border-0 " id="sidebarToggle"></button>
             </div>
 
@@ -187,20 +174,20 @@
         <div id="content-wrapper" class="d-flex flex-column">
 
             <!-- Main Content -->
-            <div id="content">
+            <div id="content ">
 
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow ">
 
                     <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3 ">
                         <i class="fa fa-bars"></i>
                     </button>
 
                   
 
                     <!-- Topbar Navbar-->
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav ml-auto ">
 
                        
 
@@ -276,14 +263,14 @@
 
                         
                         <!-- Total booking Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
+                        <div class="col-xl-3 col-md-6 mb-4 " >
+                            <div class="card border-left-warning shadow h-100 py-2 bg-dark">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                                                 Total Booking</div>
-                                                <div id="BookingCount" class="h5 mb-0 font-weight-bold text-gray-800">Loading...</div>
+                                                <div id="BookingCount" class="h5 mb-0 font-weight-bold text-gray-800">0</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fa fa-address-book fa-2x text-gray-300"></i>
@@ -295,13 +282,13 @@
 
                         <!-- Total vehicle Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-info shadow h-100 py-2">
+                            <div class="card border-left-warning shadow h-100 py-2 bg-dark">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Total Vehicle
+                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Total Vehicle
                                             </div>
-                                            <div id="vehicleCount" class="h5 mb-0 font-weight-bold text-gray-800">Loading...</div>
+                                            <div id="vehicleCount" class="h5 mb-0 font-weight-bold text-gray-800">0</div>
                                             
                                         </div>
                                         <div class="col-auto">
@@ -314,13 +301,13 @@
 
                         <!-- Total customer Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card border-left-warning shadow h-100 py-2 bg-dark">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                                                 Total Customer</div>
-                                                <div id="CustomerCount" class="h5 mb-0 font-weight-bold text-gray-800">Loading...</div>
+                                                <div id="CustomerCount" class="h5 mb-0 font-weight-bold text-gray-800">0</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fa fa-user fa-2x text-gray-300"></i>
@@ -333,13 +320,13 @@
 
                         <!-- Pending Requests Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-warning shadow h-100 py-2">
+                            <div class="card border-left-warning shadow h-100 py-2 bg-dark">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                                                 Pending Booking</div>
-                                            <div id="pendingBookingCount" class="h5 mb-0 font-weight-bold text-gray-800">Loading...</div>
+                                            <div id="pendingBookingCount" class="h5 mb-0 font-weight-bold text-gray-800">0</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fa fa-bookmark fa-2x text-gray-300"></i>
@@ -403,15 +390,7 @@
             </div>
             <!-- End of Main Content -->
 
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Southern Lanka Rent & Car</span>
-                    </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
+           
 
         </div>
         <!-- End of Content Wrapper -->
@@ -443,6 +422,17 @@
             </div>
         </div>
     </div>
+
+
+     <!-- Footer -->
+     <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Southern Lanka Rent & Car</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
