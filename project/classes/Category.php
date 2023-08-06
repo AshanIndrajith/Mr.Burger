@@ -61,7 +61,7 @@
                 $catupdate=$this->db->update($query);
                 if ($catupdate) {
                     $msg="Category Updated Successfully";
-                    header("Location:categories.php");
+                    header("Location:view_categories.php");
                     return $msg;
                 }else{
                     $msg="Category Not Updated";

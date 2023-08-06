@@ -1,10 +1,18 @@
 <?php include '../classes/Category.php'?>
 <?php
-    $cat = new Category();
-    if (isset($_GET['delete'])) {
-        $id=$_GET['delete'];
-        $delCat=$cat->delByCatId($id);
+    if (!isset($_GET['catid'])|| $_GET['catid']==NULL) {
+        echo "<script>window.location='view_catergory.php'</script>";
+    }else{
+        $id=$_GET['catid'];
     }
+?>
+<?php
+   $cat = new Category();
+   if ($_SERVER['REQUEST_METHOD']=='POST') {
+      $catName=$_POST['categories'];
+      $updateCat=$cat->catUpdate($catName,$id);
+   }
+   
 ?>
 
 <!DOCTYPE html>
@@ -231,23 +239,7 @@
                     <li class="nav-item dropdown no-arrow">
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <script>
-                                $(document).ready(function() {
-                                        // Read the query parameters from the URL
-                                        var params = new URLSearchParams(window.location.search);
-                                        var uname = params.get("id");
-
-                                  
-                                     
-
-                                        // Set the values of the elements on the page
-                                         $('#fname').text(uname);
-                                        
-                                       
-                                    });
-
-                                
-                            </script>
+                          
                             <span class="mr-2 d-none d-lg-inline text-gray-600 small" id="fname"></span>
                             <img class="img-profile rounded-circle"
                                 src="img/undraw_profile.svg">
@@ -276,63 +268,68 @@
 
                 <div class="container">
 
+                    <div class="card o-hidden border-0 shadow-lg my-5">
+                        <div class="card-body p-0">
+                            <!-- Nested Row within Card Body -->
+                            <div class="row">
+                                <div class="col-lg-5 d-none d-lg-block" style="padding-top:100px;">
+                                    <img src="" width="80%">
+                                </div>
+                                <div class="col-lg-7">
+                                    <div class="p-5">
+                                        <div class="text-center">
+                                            <h1 class="h4 text-gray-900 mb-4">Update a Category!</h1>
+                                            <div class="cat-error"><?php 
+                                $getCat=$cat->getCatById($id);
+                                if ($getCat) {
+                                    while ($result=$getCat->fetch_assoc()) {
+                           ?>
+                                              
+                                        </div>
+                                        <form class="user" method="post">
+                                           
+                                            <div class="form-group">
+                                                <input type="text" class="form-control form-control-user"  name="categories" value="<?php echo $result['CategoryName']?>"
+                                                    placeholder="Category">
+                                            </div>
 
-                    
-
-                                     <!-- DataTales Example -->
-                    <div class="card shadow mb-4 ">
-                        <div class="card-header py-3 ">
-                            <h4 class="m-0 font-weight-bold text-dark " style="text-align: center; font-family:cursive;">catergory Information </h4>
-                        </div>
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="RentTable" width="100%" cellspacing="0">
-                                    <thead class="bg-gradient-dark text-white">
-                                        <tr>
-                                            <th>Id</th>
-                                            <th>Category</th>
-                                            <th>Status</th>
+                                         
+                                            <button type="submit" name="submit" class="btn btn-success btn-block">Update</button>
+                                      
+                                                
                                             
-                                        </tr>
-                                    </thead>
                                     
-                                       <tbody>
-                                       <?php 
-                                            $getCat=$cat->getAllCat();
-                                            if ($getCat) {
-                                                $i=0;
-                                               while ($result=$getCat->fetch_assoc()) {
-                                                $i++;
-                                        ?>
-                                        <tr>
-                                          
-                                            <td><?php echo $result['CategoryId']?></td>
-                                            <td><?php echo $result['CategoryName']?></td>
-                                            <td>
-                                                <div class="option-btn">
-                                                <?php 
-                                                    echo "<span class='btn btn-danger text-light'><a href='?delete=".$result['CategoryId']."'>Delete</a></span> &nbsp;";
-                                                    echo "<span class='btn btn-info edit-btn'><a href='update_catergory.php?catid=".$result['CategoryId']."'>Edit</a></span>";
-                                                 ?>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <?php 
-                                                }
-                                            }
-                                        ?>
+                        
 
-                                       </tbody>
-                                    
-                                    
-                                </table>
-                            </div>
+                                            
+                                            <!-- <button type="button" class="submit btn btn-primary btn-user btn-block" onclick="saveCustomer()">Submit</button>  -->
+                                          
+                                          
+                                        </form >
+                                        <?php
+                                 }
+                                }
+                        ?>
+                        <div class="cat-error">
+                            <?php 
+                                 if (isset($insertCat)) {
+                                    echo $insertCat;
+                                 }
+                           ?>
+                           
+                           
                         </div>
-                    </div>
+
+
                                     
                                      
                                       
-                  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
                 </div>
             
             
